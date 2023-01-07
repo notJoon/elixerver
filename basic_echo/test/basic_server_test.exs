@@ -1,4 +1,4 @@
-defmodule TcpEchoTest do
+defmodule BasicServerTest do
   use ExUnit.Case
   doctest TcpEcho
 
