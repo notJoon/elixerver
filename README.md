@@ -1,4 +1,5 @@
 # elixerver
+
 basic web server with elixir
 
 ## How to run
@@ -26,3 +27,10 @@ case 2: just see the response
 
 nc localhost {port}
 '''
+
+## TODO
+
+- [ ] basic echo server
+- [ ] application server
+- [ ] apply REST api and gRPC with Phoenix
+- [ ] basic CRUD things

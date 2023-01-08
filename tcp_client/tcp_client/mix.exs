@@ -1,9 +1,9 @@
-defmodule TcpEcho.MixProject do
+defmodule TcpClient.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :basic_echo,
+      app: :tcp_client,
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
