@@ -1,6 +1,6 @@
-defmodule TcpClient do
+defmodule Http do
   @moduledoc """
-  Documentation for `TcpClient`.
+  Documentation for `Http`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule TcpClient do
 
   ## Examples
 
-      iex> TcpClient.hello()
+      iex> Http.hello()
       :world
 
   """
