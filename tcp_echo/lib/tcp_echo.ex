@@ -11,7 +11,7 @@ defmodule TcpEcho do
   def init(opts) do
     port = Keyword.get(opts, :port, 4050)
 
-    {:ok, socket} = :gen_tcp.listen(port, [:binary, active: false])
+    {:ok, socket} = :gen_tcp.listen(port, [:binary, active: false, reuseaddr: true])
 
     accept_loop(socket)
   end
@@ -19,7 +19,10 @@ defmodule TcpEcho do
   @spec accept_loop(socket :: :gen_tcp.socket()) :: :ok | {:error, any()}
   def accept_loop(socket) do
     {:ok, connection} = :gen_tcp.accept(socket)
-    echo_loop(connection)
+
+    # Spawn a new process to handle the multiple connection
+    spawn(fn -> echo_loop(connection) end)
+
     accept_loop(socket)
   end
 
