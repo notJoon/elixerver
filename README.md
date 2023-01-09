@@ -6,17 +6,15 @@ basic web server with elixir
 
 ### Start the server
 
-''' plain
-(in terminal 1)
-
+``` plain
 iex -S mix
 
 {:ok, pid} = Elixerver.start_link [port: {port}, message: "{message}"]
-'''
+```
 
 ### Send a request
 
-''' plain
+``` plain
 (in terminal 2)
 
 case 1: send echo massage
@@ -26,7 +24,7 @@ echo "{message}" | nc localhost {port}
 case 2: just see the response
 
 nc localhost {port}
-'''
+```
 
 ## TODO
 
